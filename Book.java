@@ -1,36 +1,36 @@
-package SPBLab2;
+package SPLab;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Book {
-	private String name;
-	private Author a;
-	private List<Chapter> chapters = new ArrayList<>();
-
-	public Book(String num) {
-		this.name = num;
+    private String name;
+	private List<String> paragraphsList=new ArrayList<String>();
+    private List<String> imagesList=new ArrayList<String>();
+	private  List<String> tablesList=new ArrayList<String>();
+	public Book(String name)
+	{
+		this.name=name;
 	}
 
-	public void addAuthor(Author b) {
-		this.a = b;
+	public void createNewParagraph(String para) {
+		this.paragraphsList.add(para);
 	}
 
-	public int createChapter(String b1) {
-		Chapter b = new Chapter(b1);
-		this.chapters.add(b);
-		return this.chapters.size();
+	public void createNewImage(String img) {
+		this.imagesList.add(img);
 	}
 
-	public Chapter getChapter(int index) {
-		Chapter a = new Chapter();
-		for (int i = 0; i < this.chapters.size(); ++i) {
-			if (i == index) {
-				return this.chapters.get(i);
-			}
-		}
-		return a;
-
+	public void createNewTable(String tab) {
+		this.tablesList.add(tab);
 	}
 
+	public void print() {
+		System.out.println("Nume "+this.name);
+		System.out.println("Lista de paragrafe: " + this.paragraphsList);
+		System.out.println("Lista de imagini: " + this.imagesList);
+		System.out.println("Lista de tabele: " + this.tablesList);
+		
+	}
+	
 }
