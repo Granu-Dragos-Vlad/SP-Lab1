@@ -1,19 +1,34 @@
-package SPBLab2;
+package SPLab3;
 
-public class Image {
-	private String name;
+public class Image implements Element {
+	private String url;
 
-	public Image(String name) {
-		this.name = name;
+	public Image(String url) {
+		this.url = url;
 	}
 
-	public Image() {
+	@Override
+	public void print() {
+		System.out.println("Image with name: " + this.url);
 
 	}
 
 	@Override
-	public String toString() {
-		return name;
+	public void add(Element e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void remove(Element e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Element get(int index) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

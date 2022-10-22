@@ -1,15 +1,10 @@
 package SPLab3;
 
-public class Table implements Element {
-	private String name;
-
-	public Table(String name) {
-		this.name = name;
-	}
+public class TableOfContents implements Element {
 
 	@Override
 	public void print() {
-		System.out.println("Tabel: " + this.name);
+		// TODO Auto-generated method stub
 
 	}
 

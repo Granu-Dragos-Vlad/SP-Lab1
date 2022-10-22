@@ -1,20 +1,34 @@
-package SPBLab2;
+package SPLab3;
 
-public class Paragraph {
-	private String name;
+public class Paragraph implements Element {
+	private String text;
 
-	public Paragraph(String name) {
-
-		this.name = name;
+	public Paragraph(String text) {
+		this.text = text;
 	}
 
-	public Paragraph() {
+	@Override
+	public void print() {
+		System.out.println("Paragraph: " + text);
 
 	}
 
 	@Override
-	public String toString() {
-		return name;
+	public void add(Element e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void remove(Element e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Element get(int index) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

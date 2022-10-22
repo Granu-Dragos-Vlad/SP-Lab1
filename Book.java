@@ -1,36 +1,37 @@
-package SPBLab2;
+package SPLab3;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Book {
-	private String name;
-	private Author a;
-	private List<Chapter> chapters = new ArrayList<>();
+public class Book extends Section {
 
-	public Book(String num) {
-		this.name = num;
+	private String titlu;
+	private List<Element> el = new ArrayList<>();
+	private List<Author> autori = new ArrayList<>();
+
+	public Book(String titlu) {
+		this.titlu = titlu;
 	}
 
-	public void addAuthor(Author b) {
-		this.a = b;
+	public void addAuthor(Author a) {
+		this.autori.add(a);
 	}
 
-	public int createChapter(String b1) {
-		Chapter b = new Chapter(b1);
-		this.chapters.add(b);
-		return this.chapters.size();
+	public void addContent(Element e) {
+		this.el.add(e);
 	}
 
-	public Chapter getChapter(int index) {
-		Chapter a = new Chapter();
-		for (int i = 0; i < this.chapters.size(); ++i) {
-			if (i == index) {
-				return this.chapters.get(i);
-			}
+	public void print() {
+		System.out.println("Book: " + this.titlu);
+		System.out.println();
+		System.out.println("Authors: ");
+		for (Author a : autori) {
+			System.out.println(a);
 		}
-		return a;
-
+		System.out.println();
+		for (Element e : this.el) {
+			e.print();
+		}
 	}
 
 }
