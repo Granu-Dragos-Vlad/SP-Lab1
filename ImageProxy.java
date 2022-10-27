@@ -1,23 +1,26 @@
 package SPLab4;
 
-import java.util.concurrent.TimeUnit;
-
-public class Image implements Element {
+public class ImageProxy implements Element, Picture {
 	private String url;
+	private int dim;
+	private Image image;
 
-	public Image(String name) {
-		this.url =name;
-		try {
-		TimeUnit.SECONDS.sleep(5);
-		} catch (InterruptedException e) {
-		e.printStackTrace();
-		}
-		}
+	public ImageProxy(String url) {
 
+		this.url = url;
+	}
+
+	public Image loadImage() {
+		if (image == null) {
+			image = new Image(url);
+		}
+		return image;
+	}
 
 	@Override
 	public void print() {
-		System.out.println("Image with name: " + this.url);
+		loadImage().print();
+		// TODO Auto-generated method stub
 
 	}
 

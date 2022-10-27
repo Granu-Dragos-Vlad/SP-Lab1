@@ -1,4 +1,4 @@
-package SPLab3;
+package SPLab4;
 
 public class Author {
 	private String name;

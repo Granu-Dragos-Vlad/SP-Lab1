@@ -1,4 +1,4 @@
-package SPLab3;
+package SPLab4;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,11 +46,6 @@ public class Section implements Element {
 			return this.elemente.get(index);
 		} else
 			return null;
-	}
-
-	@Override
-	public String toString() {
-		return "Section [title=" + title + ", elemente=" + elemente + "]";
 	}
 
 }
